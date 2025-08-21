@@ -46,3 +46,71 @@
             color: red;
             font-weight: bold;
         }
+
+        /* Floating Plus Button */
+        .add-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #3498db;
+            color: white;
+            font-size: 30px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .add-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Popup Form Styles */
+        .form-popup {
+            display: none; /* hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+            width: 500px;
+        }
+        .form-popup h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #2c3e50;
+        }
+        .form-popup input, .form-popup select {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .form-popup button {
+            width: 95%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .form-popup button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Overlay behind form */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 900;
+        }
