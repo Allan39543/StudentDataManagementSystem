@@ -51,7 +51,7 @@ async function submitForm() {
     const student = {
         name: document.getElementById("name").value,
         admission_number: document.getElementById("admission").value,
-        class: document.getElementById("class").value,
+        class_name: document.getElementById("class").value,  
         stream: document.getElementById("stream").value,
     };
 
@@ -67,12 +67,14 @@ async function submitForm() {
             closeForm();
             main(); // reload student list
         } else {
-            alert("Failed to add student");
+            const err = await response.json();
+            alert("Failed to add student: " + err.detail);
         }
     } catch (error) {
         console.error("Error adding student:", error);
     }
 }
+
 
 // ---------------- Main ----------------
 async function main() {
